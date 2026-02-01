@@ -1,120 +1,59 @@
-body.center {
-  height: 100vh;
-  margin: 0;
-  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  color: white;
-}
-
-h1 {
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-}
-
-.buttons button {
-  padding: 15px 30px;
-  font-size: 22px;
-  border: none;
-  border-radius: 12px;
-  margin: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#yesBtn {
-  background: #ff4d6d;
-  color: white;
-}
-
-#noBtn {
-  background: white;
-  color: #ff4d6d;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
-/* Floating Hearts */
-.hearts::before {
-  content: "💖 💕 💗 💘 💓";
+/* BIG FLOATING HEARTS */
+.floating-hearts {
   position: fixed;
-  bottom: -40px;
-  width: 100%;
-  font-size: 28px;
-  animation: floatUp 8s linear infinite;
+  inset: 0;
+  pointer-events: none;
 }
 
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-120vh); opacity: 0; }
-}
-
-/* Envelopes */
-.envelopes {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.envelope {
-  width: 260px;
-  height: 160px;
-  background: white;
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.envelope span {
+.floating-hearts::before {
+  content: "❤ 💕 💖 ❤ 💕 💖 ❤";
   position: absolute;
-  bottom: -35px;
   width: 100%;
-  font-size: 16px;
+  font-size: 55px;
+  opacity: 0.35;
+  animation: floatHearts 12s linear infinite;
+  text-align: center;
 }
 
-.envelope .body {
+@keyframes floatHearts {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-120vh); }
+}
+
+/* TEDDY */
+.teddy {
   position: absolute;
-  bottom: 0;
-  height: 110px;
-  width: 100%;
-  background: #ff4d6d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 38px;
+  bottom: 40px;
+  font-size: 90px;
+  animation: teddyIdle 3s ease-in-out infinite;
 }
 
-.envelope .flap {
+@keyframes teddyIdle {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* TEDDY HEART */
+.teddy-heart {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #ff758f;
-  clip-path: polygon(0 0, 100% 0, 50% 55%);
-  transform-origin: top;
-  transition: transform 0.6s ease;
+  font-size: 30px;
+  right: -10px;
+  bottom: 10px;
+  animation: heartPulse 1.5s infinite;
 }
 
-.envelope.open .flap {
-  transform: rotateX(180deg);
+@keyframes heartPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
-/* Letters */
-.letter-text {
-  max-width: 320px;
-  font-size: 18px;
-  line-height: 1.6;
+/* TEDDY HAPPY REACTION */
+.teddy.happy {
+  animation: teddyJump 0.6s ease-in-out 3;
 }
 
-/* Photos */
-.photos img {
-  width: 220px;
-  margin: 10px;
-  border-radius: 12px;
+@keyframes teddyJump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
 }
