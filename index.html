@@ -13,13 +13,20 @@
   <source src="love.mp3" type="audio/mpeg">
 </audio>
 
-<div class="hearts"></div>
+<!-- Floating big hearts -->
+<div class="floating-hearts"></div>
 
 <h1>Will you be my Valentine? 💕</h1>
 
 <div class="buttons">
   <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
   <button id="noBtn" onmouseover="runAway()">NO 💔</button>
+</div>
+
+<!-- Teddy holding heart -->
+<div id="teddy" class="teddy">
+  🧸
+  <span class="teddy-heart">❤️</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
