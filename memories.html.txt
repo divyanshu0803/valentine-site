@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center">
+
+<h1>Our Memories 📸</h1>
+
+<div class="photos">
+  <img src="images/photo1.jpg">
+  <img src="images/photo2.jpg">
+  <img src="images/photo3.jpg">
+</div>
+
+<p class="letter-text">
+No matter where life takes us,<br>
+these moments will always be my favorite ❤️
+</p>
+
+</body>
+</html>

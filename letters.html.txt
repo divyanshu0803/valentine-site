@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Letters 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center">
+
+<h1>Open Your Letters 💖</h1>
+
+<div class="envelopes">
+
+  <div class="envelope" onclick="openLetter('reasons.html', this)">
+    <div class="flap"></div>
+    <div class="body">💌</div>
+    <span>Reasons Why I Love You</span>
+  </div>
+
+  <div class="envelope" onclick="openLetter('beauty.html', this)">
+    <div class="flap"></div>
+    <div class="body">💖</div>
+    <span>How I See Your Beauty</span>
+  </div>
+
+  <div class="envelope" onclick="openLetter('memories.html', this)">
+    <div class="flap"></div>
+    <div class="body">📸</div>
+    <span>Our Memories</span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

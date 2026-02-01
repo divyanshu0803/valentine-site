@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center">
+
+<h1>Your Beauty ✨</h1>
+
+<p class="letter-text">
+Your beauty isn’t just how you look.<br><br>
+It’s how you care.<br>
+How you love.<br>
+How you exist.<br><br>
+You don’t just look beautiful.<br>
+You are beautiful — to me, always 💖
+</p>
+
+</body>
+</html>
