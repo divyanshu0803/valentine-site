@@ -11,15 +11,23 @@ function runAway() {
 }
 
 function yesClicked() {
+  // Teddy happy reaction
+  const teddy = document.getElementById("teddy");
+  if (teddy) {
+    teddy.classList.add("happy");
+  }
+
+  // Confetti burst
   confetti({
-    particleCount: 200,
-    spread: 120,
+    particleCount: 250,
+    spread: 140,
     origin: { y: 0.6 }
   });
 
+  // Go to letters page
   setTimeout(() => {
     window.location.href = "letters.html";
-  }, 1500);
+  }, 1800);
 }
 
 function openLetter(page, element) {
